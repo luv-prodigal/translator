@@ -82,10 +82,5 @@ export function useTranslator() {
     }
   }, [])
 
-  const clear = useCallback(() => {
-    setTranslation('')
-    setError(null)
-  }, [])
-
-  return { status, progress, translation, error, isCached, initModel, translate, clear }
+  return { status, progress, translation, error, isCached, initModel, translate }
 }
