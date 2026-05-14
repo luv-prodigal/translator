@@ -5,7 +5,7 @@ import TranslatorPanel from './components/TranslatorPanel'
 import StatusBadge from './components/StatusBadge'
 
 export default function App() {
-  const { status, progress, translation, error, isCached, initModel, translate } = useTranslator()
+  const { status, progress, translation, error, isCached, initModel, translate, clear } = useTranslator()
 
   useEffect(() => {
     initModel()
@@ -37,6 +37,7 @@ export default function App() {
               translate={translate}
               isTranslating={status === 'translating'}
               translation={translation}
+              onClear={clear}
             />
           )}
 
